@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ES6 challenge</title>
+    </head>
+    <body>
+
+
+        
+<script>
+
+    let park = new Map()    
+    //1st park
+    park.set('Royal park', 1967);
+    //2nd park
+    park.set('national park', 1977);
+    //3rd park
+    park.set('Indian park', 1987);
+
+    let streets = new Map();
+    //1st street
+    streets.set('Freedom street',1970);
+    //2nd street
+    streets.set('Richmond street',1980);
+    //3rd street
+    streets.set('Kormangala street',1990);
+    
+
+    //Average age of park
+    
+    //console.log(park.get('build year'));//87
+    //console.log(park.forEach((value,key) => `${key} and ${value}`));
+
+    //console.log(park.entries());
+    //console.log(park.size);
+
+
+    let length = park.size;
+    let sum = 0,avg = 0, age = 0, density = 0;
+    for(let [name,est] of park.entries()){
+        //console.log(`This is and ${value}`);
+        
+        //1st
+        age = new Date().getFullYear() - est;
+        sum += age;
+
+        //2nd
+        //density = trees / area;
+        //console.log(`${name} has tree density of ${density} trees per square km.`);
+
+    }
+    avg = sum / length;
+
+    console.log(`============PARK REPORT============`);
+    console.log(`Our ${park.size} parks have an average age of ${avg} years.`);
+
+
+
+
+    // class Park {
+    //     constructor(name, year) {
+    //         this.name = name;
+    //         this.year = year;
+    //     }
+
+    //     getAverage() {
+    //         this.year;
+    //     }
+
+    // }
+
+    // const park1 = new Park('Royal park', 1967);
+    // const park2 = new Park('National park', 1977);
+    // const park3 = new Park('Indian park', 1987);
+
+    // console.log(park1.name);
+
+</script>
+
+    </body>
+</html>    
